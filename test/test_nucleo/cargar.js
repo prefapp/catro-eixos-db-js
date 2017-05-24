@@ -94,12 +94,40 @@ describe("Núcleo - Base", () => {
 
                 rutaModelos: __dirname + "/../fixtures/modelo",
 
-                
-
             })
             .then((orm) => {
 
                 hecho();
+            })
+
+            .catch((err) => {
+
+                console.log(err);
+                hecho(1);
+
+            })
+
+        })
+
+        it("Sincronización de sistema correcto", (hecho) => {
+
+
+            CEDB.iniciar("test", {
+
+                tipoBbdd: "sqlite",
+
+                rutaModelos: __dirname + "/../fixtures/modelo",
+
+            })
+            .then((instancia) => {
+
+                return instancia.crearTablas(true);
+            })
+
+            .then(() => {
+
+                hecho();
+
             })
 
             .catch((err) => {
