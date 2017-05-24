@@ -1,0 +1,21 @@
+{
+  "name": "catro-eixos-db-js",
+  "version": "1.0.0",
+  "description": "Plugin para interactuar con bbdd",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "keywords": [
+    "catro-eixos-js"
+  ],
+  "author": "Francisco Maseda Muiño <frmadem@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "catro-eixos-js": "^1.0.1",
+    "chai": "^3.5.0",
+    "mocha": "^3.4.1",
+    "sequelize": "^3.30.4",
+    "sqlite3": "^3.1.8"
+  }
+}
